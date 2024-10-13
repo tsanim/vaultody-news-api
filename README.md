@@ -25,24 +25,32 @@ npm install
 
 Create a .env file in the root directory with the following variables(There is defaults):
 
+```
 ENV MONGO_URI="mongodb://localhost:27017"
 ENV MONGO_DB_NAME="vaultody"
 ENV MAX_POOL_SIZE=100
 ENV PORT=5252
+```
 
 Run TypeScript compiler:
 
+```
 npm run build
+```
 
 ## Starting the Application
 
 To start the application in development mode, use:
 
+```
 npm run dev
+```
 
 To start the application in production mode, first build it and then run:
 
+```
 npm start
+```
 
 ## Endpoints
 
@@ -52,11 +60,13 @@ npm start
 
 **Body:**
 
+```
 {
   "title": "News Title",
   "description": "Optional short description",
   "text": "Full text of the news article."
 }
+```
 
 ### Get News Articles
 
@@ -82,7 +92,9 @@ npm start
 
 To run the tests, use:
 
+```
 npm test
+```
 
 ## Dockerization
 
@@ -92,13 +104,17 @@ This application comes with a Dockerfile and a docker-compose.yml for easy conta
 
 Build the Docker image:
 
+```
 docker build -t news-api .
+```
 
 ### Running the Docker Container
 
 To run the application with Docker Compose, use:
 
+```
 docker-compose up --build
+```
 
 This will start the application and a MongoDB instance as defined in docker-compose.yml.
 
@@ -106,4 +122,6 @@ This will start the application and a MongoDB instance as defined in docker-comp
 
 To stop the running containers, use:
 
+```
 docker-compose down
+```
